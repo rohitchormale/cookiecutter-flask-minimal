@@ -32,12 +32,11 @@ def create_app():
         # app.register_blueprint(auth_blueprint)
 
 
-
         # finally create tables as per models
         db.create_all()
 
         @app.route("/")
-        def home():
+        def index():
             # TODO - add here endpoint of resource where you want to land on page load. e.g.
             # return redirect(url_for("auth_blueprint.home"))
             return render_template("index.html")

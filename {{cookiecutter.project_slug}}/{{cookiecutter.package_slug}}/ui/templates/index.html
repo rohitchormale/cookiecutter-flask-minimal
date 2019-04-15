@@ -10,6 +10,17 @@
 <body>
 Welcome to Flask
 
+<!-- ref - https://flask-wtf.readthedocs.io/en/stable/csrf.html -->
+<!-- with FlaskForm is used. see 'forms.py' -->
+<form method="post" action="{{ url_for('index') }}">
+    {{ form.csrf_token }}
+</form>
+
+<!-- if FlaskForm is not used -->
+<form method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+</form>
+
 
 <script src="/static/js/custom.js"></script>
 
