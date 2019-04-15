@@ -34,7 +34,7 @@ def create_app():
 
         # TODO register commands here e.g.
         from .commands import {{ cookiecutter.package_slug }}_cli
-        app.cli.add_command({{ cookiecutter.package_slug }})
+        app.cli.add_command({{ cookiecutter.package_slug }}_cli)
 
 
         # finally create tables as per models
