@@ -22,7 +22,8 @@ def create_app():
     handler.setFormatter(logging.Formatter("[%(asctime)s] %(levelname)s [%(pathname)s at %(lineno)s]: %(message)s", "%Y-%m-%d %H:%M:%S"))
     app.logger.addHandler(handler)
 
-    # init
+    # init extensions
+    csrf.init_app(app)
     db.init_app(app)
 
     with app.app_context():
