@@ -6,6 +6,6 @@ Testing = True
 
 # Logging
 import logging
-LOG_FILE = "/tmp"
+LOG_FILE = "/tmp/{{ cookiecutter.project_slug }}.log"
 LOG_SIZE= 1024*1024
 LOG_LEVEL = logging.DEBUG

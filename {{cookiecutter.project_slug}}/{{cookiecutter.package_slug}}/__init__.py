@@ -4,7 +4,7 @@ App init module
 @author: {{ cookiecutter.author }}
 """
 
-from flask import Flask, redirect, url_for
+from flask import Flask, redirect, url_for, render_template
 import logging
 import logging.handlers
 from .extensions import *
@@ -39,6 +39,7 @@ def create_app():
         def home():
             # TODO - add here endpoint of resource where you want to land on page load. e.g.
             # return redirect(url_for("auth_blueprint.home"))
-            return redirect(url_for("index"))
+            # return render_template("index.html")
+            return "Hello Flask"
 
     return app
