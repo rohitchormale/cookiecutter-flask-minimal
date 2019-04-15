@@ -9,8 +9,10 @@ DEBUG = True
 Testing = True
 
 # database
-SQLALCHEMY_DATABASE_URI = "sqlite:///%s/instance/{{ cookiecutter.project_slug }}.sqlite3" % BASE_DIR
 SQLALCHEMY_TRACK_MODIFICATIONS = False
+SQLALCHEMY_DATABASE_URI = "sqlite:///%s/instance/{{ cookiecutter.project_slug }}.sqlite3" % BASE_DIR # sqlite
+# SQLALCHEMY_DATABASE_URI = "mysql://<username>:<password>@<host>/<database>" # mysql/mariadb
+
 
 # Logging
 import logging
