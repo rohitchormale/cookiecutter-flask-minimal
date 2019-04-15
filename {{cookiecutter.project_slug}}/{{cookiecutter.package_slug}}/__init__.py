@@ -13,7 +13,7 @@ from .routes import *
 
 
 def create_app():
-    app = Flask(__name__, instance_relative_config=True)
+    app = Flask(__name__, instance_relative_config=True, template_folder="ui/templates", static_folder="ui/static")
     app.config.from_pyfile("config.py")
 
     # logging
@@ -39,7 +39,6 @@ def create_app():
         def home():
             # TODO - add here endpoint of resource where you want to land on page load. e.g.
             # return redirect(url_for("auth_blueprint.home"))
-            # return render_template("index.html")
-            return "Hello Flask"
+            return render_template("index.html")
 
     return app
