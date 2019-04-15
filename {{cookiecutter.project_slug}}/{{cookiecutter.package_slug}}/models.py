@@ -1,5 +1,5 @@
 from sqlalchemy.sql import func
-from {{ cookiecutter.package_slug }} import db
+from .extensions import db
 
 
 ################

@@ -5,13 +5,10 @@ App init module
 """
 
 from flask import Flask, redirect, url_for
-from flask_sqlalchemy import SQLAlchemy
 import logging
 import logging.handlers
+from .extensions import *
 
-# sqlalchemy setup
-db = SQLAlchemy()
-from .models import *
 from .routes import *
 
 
@@ -30,7 +27,9 @@ def create_app():
 
     with app.app_context():
         # TODO - register blueprints here. e.g.
+        # from .routes import auth_blueprint
         # app.register_blueprint(auth_blueprint)
+
 
 
         # finally create tables as per models
@@ -40,6 +39,6 @@ def create_app():
         def home():
             # TODO - add here endpoint of resource where you want to land on page load. e.g.
             # return redirect(url_for("auth_blueprint.home"))
-            return redirect(url_for(""))
+            return redirect(url_for("index"))
 
     return app
