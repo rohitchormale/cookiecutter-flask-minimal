@@ -38,3 +38,5 @@ By default, development environment is not enabled. To enable it, set environmen
 
 - [Flask](http://flask.pocoo.org)
 - [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/)
+- [Flask WTF](https://flask-wtf.readthedocs.io/en/stable/)
+- [FLask SQLAlchemy](http://flask-sqlalchemy.pocoo.org/)
