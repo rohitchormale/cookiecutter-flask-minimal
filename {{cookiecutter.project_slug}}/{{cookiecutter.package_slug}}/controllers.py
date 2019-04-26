@@ -19,9 +19,9 @@ def flash_errors(form):
 
 
 # e.g. controllers
-# def foo():
+# def register():
 #     context = {"title": "home"}
 #     return render_template("foo.html", **context)
 #
-# def bar():
+# def register_api():
 #     return jsonify({"first_name": "foo"}), 200
