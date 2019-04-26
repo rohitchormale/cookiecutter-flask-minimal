@@ -32,17 +32,14 @@
 
 
     myproject
-    ├── config.py
-    ├── instance
-    │   └── config.py
     ├── myproject
-    │   ├── commands.py
+    │   ├── __init__.py
+    │   ├── routes.py
     │   ├── controllers.py
+    │   ├── models.py
     │   ├── extensions.py
     │   ├── forms.py
-    │   ├── __init__.py
-    │   ├── models.py
-    │   ├── routes.py
+    │   ├── commands.py
     │   └── ui
     │       ├── static
     │       │   ├── css
@@ -51,9 +48,12 @@
     │       │       └── custom.js
     │       └── templates
     │           └── index.html
-    ├── README.md
-    ├── requirements.txt
+    ├── config.py
+    ├── instance
+    │   └── config.py
     └── wsgi.py
+    ├── requirements.txt
+    ├── README.md
 
 
 
