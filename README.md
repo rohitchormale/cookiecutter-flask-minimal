@@ -11,7 +11,7 @@
 
 ### Method 1 using remote url
 
-    > cookiecutter git@github.com:rohitchormale/cookiecutter-flask-minimal.git
+    > cookiecutter https://github.com/rohitchormale/cookiecutter-flask-minimal.git
     project_slug [myproject]: /opt/fooproject (Enter new project name with proper path. If empty, 'myproject' will be created in current directory)
     author[]: John Smith( Enter author name. If empty, empty string will be used)
     > cd <project-path>
@@ -20,7 +20,7 @@
 
 ### Method 2 from source
 
-    > git clone git@github.com:rohitchormale/cookiecutter-flask-minimal.git
+    > git clone https://github.com/rohitchormale/cookiecutter-flask-minimal.git
     > cookiecutter <absolute-path-to-cloned-repo>
     project_slug [myproject]: /opt/fooproject (Enter new project name with proper path. If empty 'myproject' will be used with current directory)
     author[]: John Smith( Enter author name. If empty, empty string will be used)
