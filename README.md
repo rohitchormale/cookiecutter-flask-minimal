@@ -104,8 +104,9 @@ use `wsgi.py` module, mentioned above.
 
 
 ### Testing using pytest
-By default this skeleton supports [pytest](https://docs.pytest.org/en/latest/) using its flask-extension [pytest-flask](http://pytest-flask.readthedocs.org/en/latest/)
-You can run test cases using below commands. 
+
+By default this skeleton supports [pytest](https://docs.pytest.org/en/latest/) using its flask-extension [pytest-flask](http://pytest-flask.readthedocs.org/en/latest/).
+Run pytest-flask using command `pip install pytest-flask`.  Run test cases using below commands. See pytest docs for more info.
 
 
     # To run all testcases
@@ -125,7 +126,6 @@ You can run test cases using below commands.
     
     # Run specific testcase from given module
     pytest --disable-warnings tests/test_controllers.py  -k 'test_add_user' --capture=sys`
-    
 
 
 
