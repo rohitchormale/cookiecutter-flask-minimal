@@ -1,5 +1,13 @@
+"""
+This module implements unit test cases for controllers.
+
+@author: {{cookiecutter.author}}
+"""
+
+
 import pytest
 from flask import url_for
+
 
 """
 - Sample test case

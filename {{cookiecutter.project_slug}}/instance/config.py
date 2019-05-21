@@ -1,5 +1,7 @@
 """
-This config should not go under version control
+Add dynamic config here. Do NOT commit this file in vcs.
+
+@author: {{cookiecutter.author}}
 """
 
 import os

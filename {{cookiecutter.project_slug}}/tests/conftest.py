@@ -1,3 +1,11 @@
+"""
+Pytest configuration file. You can add common fixtures, hooks, plugins here.
+
+
+@author: {{cookiecutter.author}}
+"""
+
+
 import pytest
 from {{cookiecutter.package_slug}} import create_app
 
