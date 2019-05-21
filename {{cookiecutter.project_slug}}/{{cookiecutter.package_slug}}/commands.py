@@ -14,10 +14,10 @@ from flask.cli import AppGroup
 """
 Example command
 
-@{{ cookiecutter.package_slug }}_cli.command("test-command")
+@{{ cookiecutter.package_slug }}_cli.command("add-user")
 @click.option("--arg1")
 @click.option("--arg2")
 @click.option("--arg3")
-def test_command(arg1, arg2, arg3):
+def add_user(arg1, arg2, arg3):
     print("Command executed successfully")
 """
