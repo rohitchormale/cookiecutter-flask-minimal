@@ -18,7 +18,7 @@ def mock_user():
 
 # add below decorator if you want to run tests in given class sequentially
 @pytest.mark.incremental
-class TestUser():
+class TestUser(object):
     def test_add_user(self, client, mock_user):
         rv = client.post(url_for("add_user"), json=mock_user)
         data = json.loads(rv.data)

@@ -55,9 +55,9 @@
     ├── config.py
     ├── instance
     │   └── config.py
-    └── wsgi.py
+    ├── wsgi.py
     ├── requirements.txt
-    ├── README.md
+    └── README.md
 
 
 
