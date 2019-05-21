@@ -48,6 +48,10 @@
     │       │       └── custom.js
     │       └── templates
     │           └── index.html
+    ├── tests
+    │   ├── __init__.py
+    │   ├── conftest.py
+    │   └── test_controllers.py
     ├── config.py
     ├── instance
     │   └── config.py
@@ -77,12 +81,16 @@ Make sure to enable related extension for this. Database url will be configured 
 * **myproject/myproject/ui/static** - keep your static files like css, js, media here.
 * **myproject/myproject/ui/templates** - keep your http templates here.
 
-* **myproject/README.md** - Information about project.
-* **myproject/requirements.txt** - Python modules used in project.
-* **myproject/wsgi.py** - `wsgi` module to integrate app with web servers like apache, gunicorn. See [mod_wsgi](http://flask.pocoo.org/docs/1.0/deploying/mod_wsgi/).
 * **myproject/config.py** - Project permanent configuration. This should be committed in version control tool. Similar to `settings.py` in django.
 * **myproject/instance/config.py** - Project temporary config like secrets etc. It MUST NOT be committed in version control tool. 
 
+* **tests/conftest.py** - Test support is added using [pytest](https://docs.pytest.org/en/latest/). Common config/fixtures and plugin-loadings can be done in this module.
+* **tests/test_controllers.py** - Add unit testcases in this module. 
+
+* **myproject/wsgi.py** - `wsgi` module to integrate app with web servers like apache, gunicorn. See [mod_wsgi](http://flask.pocoo.org/docs/1.0/deploying/mod_wsgi/).
+
+* **myproject/requirements.txt** - Python modules used in project.
+* **myproject/README.md** - Information about project.
 
 
 ## Bootstrapping
@@ -90,6 +98,35 @@ Make sure to enable related extension for this. Database url will be configured 
 By default, development environment is not enabled. To enable it, set environmental variable 'FLASK_ENV=development'.
 Development server can be started using `flask run` command. While to integrate your app with web servers like apache,
 use `wsgi.py` module, mentioned above.
+
+
+## Testing
+
+
+### Testing using pytest
+By default this skeleton supports [pytest](https://docs.pytest.org/en/latest/) using its flask-extension [pytest-flask](http://pytest-flask.readthedocs.org/en/latest/)
+You can run test cases using below commands. 
+
+
+    # To run all testcases
+    pytest tests
+    
+    # To disable warnings
+    pytest --disable-warnings tests
+    
+    # To replace sys.stdout/stderr with in-mem files 
+    pytest --disable-warnings --capture=sys
+    
+    # RUn test cases from specific module
+    pytest --disable-warnings tests/test_controllers.py --capture=sys
+    
+    # Run specific testsuit from given module
+    pytest --disable-warnings tests/test_controllers.py  -k 'TestUser' --capture=sys
+    
+    # Run specific testcase from given module
+    pytest --disable-warnings tests/test_controllers.py  -k 'test_add_user' --capture=sys`
+    
+
 
 
 ## References
