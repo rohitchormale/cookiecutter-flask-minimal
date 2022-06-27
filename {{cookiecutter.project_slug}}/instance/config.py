@@ -16,6 +16,7 @@ SECRET_KEY = os.urandom(32) # same key will be used for csrf protection
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 SQLALCHEMY_DATABASE_URI = "sqlite:///%s/instance/{{ cookiecutter.project_slug }}.sqlite3" % BASE_DIR # sqlite
 # SQLALCHEMY_DATABASE_URI = "mysql://<username>:<password>@<host>/<database>" # mysql/mariadb
+# SQLALCHEMY_DATABASE_URI = "postgresql://<username>:<password>@<host>:<port>/<database>" # for postgresql
 
 
 # Logging
